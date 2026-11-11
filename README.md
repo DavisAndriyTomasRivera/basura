@@ -107,7 +107,7 @@ Proyecto académico en desarrollo. Algunas funcionalidades, categorías de resid
 
 ## Licencia
 
-No se ha especificado una licencia en el repositorio. Salvo que se añada una, el código no concede permisos adicionales de uso, modificación o distribución.
+MIT
 
 ## Autoría
 
