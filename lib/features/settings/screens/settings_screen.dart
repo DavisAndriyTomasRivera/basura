@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+
 import '../../../app/theme/app_colors.dart';
 import '../../../app/theme/app_typography.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../history/services/history_service.dart';
+import '../../onboarding/screens/onboarding_screen.dart';
 import '../widgets/model_info_card.dart';
 import '../widgets/setting_tile.dart';
 
@@ -29,11 +31,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text('Cancelar', style: AppTypography.labelLarge.copyWith(color: AppColors.textSecondary)),
+            child: Text(
+              'Cancelar',
+              style: AppTypography.labelLarge.copyWith(
+                color: AppColors.textSecondary,
+              ),
+            ),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text('Eliminar', style: AppTypography.labelLarge.copyWith(color: AppColors.error)),
+            child: Text(
+              'Eliminar',
+              style: AppTypography.labelLarge.copyWith(color: AppColors.error),
+            ),
           ),
         ],
       ),
@@ -84,7 +94,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          const Icon(LucideIcons.circleCheck, size: 16, color: AppColors.primary),
+          const Icon(
+            LucideIcons.circleCheck,
+            size: 16,
+            color: AppColors.primary,
+          ),
           const SizedBox(width: 10),
           Expanded(child: Text(title, style: AppTypography.bodyMedium)),
         ],
@@ -96,9 +110,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      appBar: AppBar(
-        title: const Text('Configuración e IA'),
-      ),
+      appBar: AppBar(title: const Text('Configuración e IA')),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         children: [
@@ -173,13 +185,35 @@ class _SettingsScreenState extends State<SettingsScreen> {
             subtitle: 'Versión ${AppConstants.appVersion} • Environmental Tech',
             trailing: const Text('v2.0.0'),
           ),
+          const SizedBox(height: 10),
+          SettingTile(
+            icon: LucideIcons.presentation,
+            title: 'Presentación de Basura',
+            subtitle: 'Conoce el proyecto y a su equipo',
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => OnboardingScreen(
+                    onComplete: () {
+                      Navigator.of(context).pop();
+                      return Future<void>.value();
+                    },
+                  ),
+                ),
+              );
+            },
+          ),
 
           const SizedBox(height: 32),
 
           Center(
             child: Column(
               children: [
-                const Icon(LucideIcons.leaf, size: 24, color: AppColors.secondary),
+                const Icon(
+                  LucideIcons.leaf,
+                  size: 24,
+                  color: AppColors.secondary,
+                ),
                 const SizedBox(height: 6),
                 Text(
                   'Basura — Smart Waste Classification',

@@ -2,7 +2,6 @@
 
 Aplicación móvil desarrollada con Flutter para la **clasificación inteligente de residuos**. El proyecto forma parte del pipeline de Ingeniería del Conocimiento y utiliza un modelo TensorFlow Lite para realizar la clasificación en el dispositivo.
 
-> El nombre del repositorio es `basura`; el nombre visible de la aplicación es **Basura — Smart Waste Classification**.
 
 ## Características
 

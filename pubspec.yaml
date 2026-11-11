@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.2
+  flutter_svg: ^2.3.3
   google_fonts: ^9.0.0
   image: ^4.12.0
   image_picker: ^1.2.4
@@ -33,3 +34,4 @@ flutter:
     - assets/
     - assets/model/
     - assets/animations/
+    - assets/logos/

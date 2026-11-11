@@ -17,8 +17,16 @@ class AppConstants {
   static const String metadataAssetAlt = 'assets/metadata.json';
 
   // Lottie Animation Paths
-  static const String analysisAnimation = 'assets/animations/Data Analysis.json';
-  static const String successAnimation = 'assets/animations/payment Successfully in green colore.json';
+  static const String phoenixAnimation = 'assets/animations/Phoenix.json';
+  static const String analysisAnimation =
+      'assets/animations/Data Analysis.json';
+  static const String successAnimation =
+      'assets/animations/payment Successfully in green colore.json';
+  static const String uncpLogo = 'assets/logos/Vectorizada.svg';
+
+  // Onboarding Storage Key
+  static const String onboardingCompletedStorageKey =
+      'basura_onboarding_completed';
 
   // Model specifications according to metadata.json
   static const int inputWidth = 224;
